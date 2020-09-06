@@ -13,7 +13,7 @@ export default function ({ menuMode }) {
 
   const menuItems = useMemo(() => ([
     {
-      text: 'Profile',
+      text: 'My Profile',
       icon: 'user',
       onClick: ()=> (history.push('/profile'))
     },
@@ -35,7 +35,6 @@ export default function ({ menuMode }) {
             }}
             className={'user-image'} />
         </div>
-        <div className={'user-name'}>{user.email}</div>
       </div>
 
       {menuMode === 'context' && (

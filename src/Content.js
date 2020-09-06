@@ -10,10 +10,10 @@ export default function () {
             <SideNavBarLayout title={appInfo.title}>
                 <Switch>
                     {routes.map(({path, component}) => (<Route exact key={path} path={path} component={component}/>))}
+                <Redirect to={'/awaitingpayments'}/>
                 </Switch>
                 <Footer>
-                    Copyright © 2020 {appInfo.title}
-                    Inc.
+                    Copyright © 2020 {appInfo.title} Inc.
                     <br/>
                     All trademarks or registered trademarks are property of their respective owners.
                 </Footer>

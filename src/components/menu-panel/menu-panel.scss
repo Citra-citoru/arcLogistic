@@ -4,12 +4,13 @@
 }
 li{
     list-style: none;
-    margin:3px;
-}
-.button-link{
-    height: 20px;
-    border:none;
+    margin:7px;
 }
 .link{
     text-decoration: none;
+    line-height: 0;
+    padding:1rem;
+    &:hover{
+        background-color: rgba($color: lightgrey, $alpha: 0.2)
+    }
 }

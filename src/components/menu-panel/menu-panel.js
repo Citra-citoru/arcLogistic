@@ -1,21 +1,25 @@
-import React, { useMemo } from 'react';
+import React, {useMemo} from 'react';
 import './menu-panel.scss';
-import { useHistory } from "react-router-dom";
-import { Link, Route, Switch } from "react-router-dom";
-import Home from '../../pages/home/home';
+import {useHistory, Link, Route, Switch, NavLink} from "react-router-dom";
+import AwaitingPayments from '../../pages/awaiting payments/awaitingpayments';
 import Button from 'devextreme-react/button';
-export default function ({ menuMode }) {
-return (
-<React.Fragment>
- <ul className="nav">
-     <li>Onboard</li>
-     <li>Insights</li>
-     <li><Link className="link" to="/awaitingpayments">Orders</Link></li>
-     <li>Shipment</li>
- </ul> 
-  <Switch>
-  <Route exact path="/home" component={Home} />
-</Switch>
-</React.Fragment> 
-)
+
+
+export default function ({menuMode}) {
+    return (
+        <React.Fragment>
+            <ul className="nav">
+                <li>Onboard</li>
+                <li>Insights</li>
+                <li>
+                    <NavLink className="link" to="/awaitingpayments" activeClassName="navlink-active">Orders</NavLink>
+                </li>
+                <li>Shipment</li>
+                <li>Products</li>
+                <li>Customers</li>
+                <li>Scans</li>
+            </ul>
+            <Switch></Switch>
+        </React.Fragment>
+    )
 }

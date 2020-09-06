@@ -23,7 +23,10 @@ export default ({ menuToggleEnabled, title, toggleMenu, box }) => (
         text="Arc Logistic"
         visible={!!title}
       />
-      <Item>
+      <Item
+        location={'before'}
+        locateInMenu={'center'}
+      >
          <MenuPanel/>
       </Item>
       <Item
@@ -33,7 +36,7 @@ export default ({ menuToggleEnabled, title, toggleMenu, box }) => (
       >
         <Button
           className={'user-button authorization'}
-          width={210}
+          width={50}
           height={'100%'}
           stylingMode={'text'}
         >

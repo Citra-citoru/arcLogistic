@@ -5,7 +5,7 @@ export const navigation = [
         items: [
             {
                 text: '⚙️ Manual Orders',
-                path: '/awaitingpayments'
+                path: '/awaiting-payment'
             }
         ]
     }, {
@@ -23,7 +23,7 @@ export const navigation = [
         items: [
             {
                 text: '⚙️ Manual Orders',
-                path: '/awaitingshipment'
+                path: '/awaiting-shipment'
             }
         ]
     }, {
@@ -50,7 +50,7 @@ export const navigation = [
         items: [
             {
                 text: '⚙️ Manual Orders',
-                path: '/orderedalert'
+                path: '/ordered-alert'
             }
         ]
     }

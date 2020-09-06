@@ -2,6 +2,7 @@ import React from 'react';
 import 'devextreme/data/odata/store';
 import DataGrid, {Column, Pager, Paging, FilterRow, Lookup,Export} from 'devextreme-react/data-grid';
 import {Button} from 'devextreme-react/button';
+import './awaiting-payment.scss';
 
 export default function manualorders() {
     return (

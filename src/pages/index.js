@@ -1,7 +1,7 @@
 export { default as ShippedPage } from './shipped/shipped';
-export { default as AwaitingPaymentPages } from './awaiting payments/awaitingpayments';
+export { default as AwaitingPaymentPage } from './awaiting-payment/awaiting-payment';
 export { default as OnHoldPage } from './onhold/onhold';
-export { default as AwaitingShipmentPage } from './awaiting shipment/awaitingshipment';
-export { default as  OrderedAlertPage} from './ordered alert/orderedalert';
+export { default as AwaitingShipmentPage } from './awaiting-shipment/awaiting-shipment';
+export { default as  OrderedAlertPage} from './ordered-alert/ordered-alert';
 export { default as  CanceledPage} from './canceled/canceled';
 export { default as  ProfilePage} from './profile/profile';

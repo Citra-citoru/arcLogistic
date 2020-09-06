@@ -1,5 +1,5 @@
 import React from 'react';
-import './orderedalert.scss';
+import './ordered-alert.scss';
 
 export default () => (
     <p className={'content-block'}>Ordered Alert Page on Progress</p>

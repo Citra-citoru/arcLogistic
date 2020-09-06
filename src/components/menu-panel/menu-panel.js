@@ -1,7 +1,6 @@
 import React, {useMemo} from 'react';
 import './menu-panel.scss';
 import {useHistory, Link, Route, Switch, NavLink} from "react-router-dom";
-import AwaitingPayments from '../../pages/awaiting payments/awaitingpayments';
 import Button from 'devextreme-react/button';
 
 
@@ -12,7 +11,7 @@ export default function ({menuMode}) {
                 <li>Onboard</li>
                 <li>Insights</li>
                 <li>
-                    <NavLink className="link" to="/awaitingpayments" activeClassName="navlink-active">Orders</NavLink>
+                    <NavLink className="link" to="/awaiting-payment" activeClassName="navlink-active">Orders</NavLink>
                 </li>
                 <li>Shipment</li>
                 <li>Products</li>

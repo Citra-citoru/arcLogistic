@@ -1,5 +1,5 @@
 import React from 'react';
-import './awaitingshipment.scss';
+import './awaiting-shipment.scss';
 
 export default() =>(
 <React.Fragment>

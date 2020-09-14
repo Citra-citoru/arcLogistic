@@ -1,24 +1,24 @@
-import React, {useMemo} from 'react';
+import React, { useContext }from 'react';
 import './menu-panel.scss';
-import {useHistory, Link, Route, Switch, NavLink} from "react-router-dom";
+import {Switch, Route, Redirect,NavLink, Link } from 'react-router-dom';
 import Button from 'devextreme-react/button';
+import {NavbarContext} from '../../contexts/top-navigation';
 
-
-export default function ({menuMode}) {
+export default function () {
+    const menu = useContext(NavbarContext);
     return (
         <React.Fragment>
             <ul className="nav">
-                <li>Onboard</li>
-                <li>Insights</li>
+            <li><NavLink className="link" to="/onboards" activeClassName="navlink-active">Onboard</NavLink></li>
+                <li><NavLink className="link" to="/dashboard" activeClassName="navlink-active">Insight</NavLink></li>
                 <li>
-                    <NavLink className="link" to="/awaiting-payment" activeClassName="navlink-active">Orders</NavLink>
+                    <Link onClick={e=>menu.setMenuID("orders")} className="link" to="/orders/awaiting-payment" activeClassName="navlink-active">Orders</Link>
                 </li>
-                <li>Shipment</li>
-                <li>Products</li>
-                <li>Customers</li>
-                <li>Scans</li>
+                <li><Link onClick={e=>menu.setMenuID("shipments")} className="link" to="/shipments/shipped-recents" activeClassName="navlink-active">Shipments</Link></li>
+                <li><NavLink className="link" to="/products" activeClassName="navlink-active">products</NavLink></li>
+                <li><NavLink className="link" to="/customers" activeClassName="navlink-active">Customers</NavLink></li>
+                <li><NavLink className="link" to="/scan" activeClassName="navlink-active">Scans</NavLink></li>
             </ul>
-            <Switch></Switch>
         </React.Fragment>
     )
 }

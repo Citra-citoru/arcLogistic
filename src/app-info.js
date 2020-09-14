@@ -1,3 +1,3 @@
 export default {
-  title: 'Arc Logistic'
+  title: 'ARC Logistic'
 };

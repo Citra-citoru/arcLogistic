@@ -1,11 +1,11 @@
-export const navigation = [
+export const OrdersNavigation = [
     {
         text: 'Awaiting Payment',
         icon: 'money',
         items: [
             {
                 text: '⚙️ Manual Orders',
-                path: '/awaiting-payment'
+                path: '/orders/awaiting-payment'
             }
         ]
     }, {
@@ -14,7 +14,7 @@ export const navigation = [
         items: [
             {
                 text: '⚙️ Manual Orders',
-                path: '/onhold'
+                path: '/orders/onhold'
             }
         ]
     }, {
@@ -23,7 +23,7 @@ export const navigation = [
         items: [
             {
                 text: '⚙️ Manual Orders',
-                path: '/awaiting-shipment'
+                path: '/orders/awaiting-shipment'
             }
         ]
     }, {
@@ -32,7 +32,7 @@ export const navigation = [
         items: [
             {
                 text: '⚙️ Manual Orders',
-                path: '/shipped'
+                path: '/orders/shipped'
             }
         ]
     }, {
@@ -41,7 +41,7 @@ export const navigation = [
         items: [
             {
                 text: '⚙️ Manual Orders',
-                path: '/cancelled'
+                path: '/orders/cancelled'
             }
         ]
     }, {
@@ -50,7 +50,7 @@ export const navigation = [
         items: [
             {
                 text: '⚙️ Manual Orders',
-                path: '/ordered-alert'
+                path: '/orders/ordered-alert'
             }
         ]
     }

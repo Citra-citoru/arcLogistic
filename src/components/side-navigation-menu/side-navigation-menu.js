@@ -1,10 +1,11 @@
-import React, { useEffect, useRef, useCallback, useMemo } from 'react';
+import React, { useState, useEffect, useRef, useCallback, useMemo,useContext } from 'react';
 import TreeView from 'devextreme-react/tree-view';
-import { navigation } from '../../app-navigation';
+import { OrdersNavigation } from '../top-navigation/orders/navigation';
+import { ShipmentsNavigation } from '../top-navigation/shipments/navigation';
 import { useNavigation } from '../../contexts/navigation';
 import { useScreenSize } from '../../utils/media-query';
 import './side-navigation-menu.scss';
-
+import { NavbarContext } from '../../contexts/top-navigation';
 import * as events from 'devextreme/events';
 
 export default function (props) {
@@ -17,16 +18,19 @@ export default function (props) {
   } = props;
 
   const { isLarge } = useScreenSize();
-  function normalizePath () {    
-    return navigation.map((item) => {
-      if(item.path && !(/^\//.test(item.path))){ 
-        item.path = `/${item.path}`;
-      }
-      return {...item, expanded: isLarge} 
-    })
+  var menu = useContext(NavbarContext);
+  var menuID = menu.menuID;
+
+  function normalizePath () {
+    return OrdersNavigation.map((item) => {
+        if(item.path && !(/^\//.test(item.path))){ 
+          item.path = `/${item.path}`;
+        }
+        return {...item, expanded: isLarge} 
+      })
   }
 
-  const items = useMemo(
+  const items = useMemo(   
     normalizePath,
     // eslint-disable-next-line react-hooks/exhaustive-deps
     []

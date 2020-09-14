@@ -1,4 +1,4 @@
-import {withNavigationWatcher} from './contexts/navigation';
+import {withNavigationWatcher} from '../../../contexts/navigation';
 import {
     AwaitingPaymentPage,
     OnHoldPage,
@@ -7,38 +7,31 @@ import {
     OrderedAlertPage,
     CanceledPage,
     ProfilePage
-} from './pages';
+} from '../../../pages/Orders';
 
-const routes = [
+const OrdersRoutes = [
     {
-        path: '/',
-        component: AwaitingPaymentPage
-    },
-    {
-        path: '/awaiting-payment',
+        path: '/orders/awaiting-payment',
         component: AwaitingPaymentPage
     }, {
-        path: '/onhold',
+        path: '/orders/onhold',
         component: OnHoldPage
     }, {
-        path: '/awaiting-shipment',
+        path: '/orders/awaiting-shipment',
         component: AwaitingShipmentPage
     }, {
-        path: '/shipped',
+        path: '/orders/shipped',
         component: ShippedPage
     }, {
-        path: '/ordered-alert',
+        path: '/orders/ordered-alert',
         component: OrderedAlertPage
     }, {
-        path: '/cancelled',
+        path: '/orders/cancelled',
         component: CanceledPage
-    }, {
-        path: '/profile',
-        component: ProfilePage
     }
 ];
 
-export default routes.map(route => {
+export default OrdersRoutes.map(route => {
     return {
         ...route,
         component: withNavigationWatcher(route.component)

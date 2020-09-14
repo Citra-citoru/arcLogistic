@@ -9,6 +9,8 @@ import './side-nav-inner-toolbar.scss';
 import { useScreenSize } from '../../utils/media-query';
 import { Template } from 'devextreme-react/core/template';
 import { useMenuPatch } from '../../utils/patches';
+import MenuPanel from '../../components/menu-panel/menu-panel';
+import { useNavigation } from '../../contexts/navigation';
 
 export default function ({ title, children }) {
   const scrollViewRef = useRef();

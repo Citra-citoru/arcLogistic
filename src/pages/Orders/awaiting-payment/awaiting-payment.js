@@ -1,22 +1,55 @@
-import React from 'react';
+import React , {useState,useEffect} from 'react';
 import 'devextreme/data/odata/store';
-import DataGrid, {Column, Pager, Paging, FilterRow, Lookup,Export} from 'devextreme-react/data-grid';
+import DataGrid, {Column, Pager, Paging, FilterRow, Lookup,Export, Selection} from 'devextreme-react/data-grid';
 import {Button} from 'devextreme-react/button';
+import {DropDownButton} from 'devextreme-react/drop-down-button';
 import './awaiting-payment.scss';
+import { Popup } from 'devextreme-react/popup';
+import newOrder from '../new-orders/new-order';
+import service from './dropdown-data.js';
 
 export default function manualorders() {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const [isPopUpVisible,setIsPopUpVisible] = useState(false);
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const [data, setData] = useState('');
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    useEffect(() => {
+        setData(service.getData());
+    },[]);
+    
     return (
         <React.Fragment>
             <h4 className={'content-block'}>Awaiting Payment</h4>
-            {/* 
+            <Popup
+                    title="New Order"
+                    visible={isPopUpVisible}
+                    contentRender={newOrder}
+                    onHiding={e=>setIsPopUpVisible(false)}
+            />
             <div className={'content-block'}>
-                <Button className="m-2" disabled={false} text="Marked As Paid"/>
-                <Button className="m-2" disabled={false} text="Taq"/>
-                <Button className="m-2" disabled={true} text="Print"/>
-                <Button className="m-2" disabled={false} text="New Order"/>
+                <Button className="m-2 lower-text" type="default" disabled={false} text="Marked As Paid"/>
+                <DropDownButton 
+                    text="Taq"
+                    className="m-2" 
+                    disabled={false} 
+                    dropDownOptions={{ width: 200 }}
+                    items = {data.taq}
+                />
+                <DropDownButton 
+                    className="m-2" 
+                    disabled={true} 
+                    text="Print"
+                    dropDownOptions={{ width: 200 }}
+                    items = {data.print}
+                /> 
+                <Button className="m-2" disabled={false} text="New Order" onClick={e=> setIsPopUpVisible(true)} />
+                <DropDownButton className="m-2" disabled={true} items = {data.assignTo} dropDownOptions={{ width: 200 }} text="Assign To"/>
+                <Button className="m-2" disabled={true} text="Hold"/>
+                <DropDownButton className="m-2" disabled={true} text="Bulk Update"/>
+                <DropDownButton className="m-2" text="Other Actions" items = {data.otherActions} dropDownOptions={{ width: 230 }}/>
             <br/>
             </div>
-            */}
             <div className={'content-block'}>
             <DataGrid
                 className={'dx-card wide-card '}
@@ -29,7 +62,8 @@ export default function manualorders() {
                 <Paging defaultPageSize={5}/>
                 <Pager showPageSizeSelector={true} showInfo={true}/>
                 <FilterRow visible={true}/>
-                 <Export enabled={true} />
+                <Export enabled={true} />
+                <Selection mode="multiple" deferred={true} />
                 <Column dataField={'Task_ID'} width={90} hidingPriority={2}/>
                 <Column
                     dataField={'Task_Subject'}

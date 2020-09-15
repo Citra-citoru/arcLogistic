@@ -19,21 +19,38 @@ export default function (props) {
 
   const { isLarge } = useScreenSize();
   var menu = useContext(NavbarContext);
-  var menuID = menu.menuID;
 
-  function normalizePath () {
-    return OrdersNavigation.map((item) => {
-        if(item.path && !(/^\//.test(item.path))){ 
-          item.path = `/${item.path}`;
-        }
-        return {...item, expanded: isLarge} 
-      })
+  function normalizePath (menuID) {
+    if(menuID === 'orders'){
+        return  OrdersNavigation.map((item) => {
+            if(item.path && !(/^\//.test(item.path))){ 
+                item.path = `/${item.path}`;
+            }
+            return {...item, expanded: isLarge} 
+            });
+    }
+    else if(menuID === 'shipments'){
+        return  ShipmentsNavigation.map((item) => {
+            if(item.path && !(/^\//.test(item.path))){ 
+                item.path = `/${item.path}`;
+            }
+            return {...item, expanded: isLarge} 
+        });
+    }
+    else{
+        return  OrdersNavigation.map((item) => {
+            if(item.path && !(/^\//.test(item.path))){ 
+                item.path = `/${item.path}`;
+            }
+            return {...item, expanded: isLarge} 
+        });
+    }
   }
 
   const items = useMemo(   
-    normalizePath,
+    () => normalizePath(menu.menuID),
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    []
+    [menu.menuID]
   );
 
   const { navigationData: { currentPath } } = useNavigation();
@@ -77,7 +94,7 @@ export default function (props) {
       <div className={'menu-container'}>
         <TreeView
           ref={treeViewRef}
-          items={items}
+          dataSource={items}
           keyExpr={'path'}
           selectionMode={'single'}
           focusStateEnabled={false}

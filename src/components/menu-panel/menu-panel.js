@@ -9,12 +9,12 @@ export default function () {
     return (
         <React.Fragment>
             <ul className="nav">
-            <li><NavLink className="link" to="/onboards" activeClassName="navlink-active">Onboard</NavLink></li>
+                <li><NavLink className="link" to="/onboards" activeClassName="navlink-active">Onboard</NavLink></li>
                 <li><NavLink className="link" to="/dashboard" activeClassName="navlink-active">Insight</NavLink></li>
                 <li>
-                    <Link onClick={e=>menu.setMenuID("orders")} className="link" to="/orders/awaiting-payment" activeClassName="navlink-active">Orders</Link>
+                    <NavLink onClick={e=>menu.setMenuID("orders")} className="link" to="/orders/awaiting-payment" activeClassName="navlink-active">Orders</NavLink>
                 </li>
-                <li><Link onClick={e=>menu.setMenuID("shipments")} className="link" to="/shipments/shipped-recents" activeClassName="navlink-active">Shipments</Link></li>
+                <li><NavLink onClick={e=>menu.setMenuID("shipments")} className="link" to="/shipments/shipped-recents" activeClassName="navlink-active">Shipments</NavLink></li>
                 <li><NavLink className="link" to="/products" activeClassName="navlink-active">products</NavLink></li>
                 <li><NavLink className="link" to="/customers" activeClassName="navlink-active">Customers</NavLink></li>
                 <li><NavLink className="link" to="/scan" activeClassName="navlink-active">Scans</NavLink></li>

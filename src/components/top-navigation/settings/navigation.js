@@ -4,27 +4,27 @@ export const SettingsNavigation = [
     icon: 'user',
     items: [
         {
-            text: '👨🏻‍💼 My Profile',
+            text: 'My Profile',
             path: '/settings/my-profile'
         },
         {
-            text: '🖥️ Display Options',
+            text: 'Display Options',
             path: '/settings/display-options'
         },
         {
-            text: '💼 Subscriptions',
+            text: 'Subscriptions',
             path: '/settings/subscription-plans'
         },
         {
-            text: '⛮ User Management',
+            text: 'User Management',
             path: '/settings/users'
         },
         {
-            text: '🔗 API Settings',
+            text: 'API Settings',
             path: '/settings/api'
         },
         {
-            text: '⏳ Workflow Settings',
+            text: 'Workflow Settings',
             path: '/settings/workflow'
         }
         ],
@@ -34,7 +34,7 @@ export const SettingsNavigation = [
         icon: 'cart',
         items: [
           {
-            text: '🏪 Store Setup',
+            text: 'Store Setup',
             path: '/settings/stores'
           }
         ]
@@ -44,11 +44,11 @@ export const SettingsNavigation = [
         icon: 'refresh',
         items: [
           {
-            text: '🗑️ Order Filters',
+            text: 'Order Filters',
             path: '/settings/filters'
           },
           {
-            text: '📏 Automation Rules',
+            text: 'Automation Rules',
             path: '/settings/automationrules'
           }
         ]
@@ -58,23 +58,23 @@ export const SettingsNavigation = [
         icon: 'box',
         items: [
           {
-            text: '📍 Ships From Locations',
+            text: 'Ships From Locations',
             path: '/settings/warehouses'
           },
           {
-            text: '⛟ Carriers and Fullfillment',
+            text: 'Carriers and Fullfillment',
             path: '/settings/providers'
           },
           {
-            text: '📦 Packages',
+            text: 'Packages',
             path: '/settings/packages'
           },
           {
-            text: '⬅️ Returns',
+            text: 'Returns',
             path: '/settings/returns'
           },
           {
-            text: '🌐 International Settings',
+            text: 'International Settings',
             path: '/settings/international'
           }
         ]
@@ -84,11 +84,11 @@ export const SettingsNavigation = [
         icon: 'print',
         items: [
             {
-                text: '🖨️ Printing Set Up',
+                text: 'Printing Set Up',
                 path: '/settings/printing'
             },
             {
-                text: '🔌 Ship Station Connect',
+                text: 'Ship Station Connect',
                 path: '/settings/connect'
             },
         ]
@@ -98,11 +98,11 @@ export const SettingsNavigation = [
         icon: 'message',
         items: [
             {
-                text: '✉️ Email Templates',
+                text: 'Email Templates',
                 path: '/settings/emailtemplates'
             },
             {
-                text: '📦 Packing Slips',
+                text: 'Packing Slips',
                 path: '/settings/packingslips'
             }
         ]
@@ -112,15 +112,15 @@ export const SettingsNavigation = [
         icon: 'selectall',
         items: [
             {
-                text: '⚙️ Inventory Settings',
+                text: 'Inventory Settings',
                 path: '/settings/inventorysettings'
             },
             {
-                text: '🔖 Allocation Strategy',
+                text: 'Allocation Strategy',
                 path: '/settings/allocationstrategy'
             },
             {
-                text: '🏚️ Inventory Warehouses',
+                text: 'Inventory Warehouses',
                 path: '/settings/inventorywarehouses'
             }
         ]
@@ -130,7 +130,7 @@ export const SettingsNavigation = [
         icon: 'smalliconslayout',
         items: [
             {
-                text: '🎎 Integration Partners',
+                text: 'Integration Partners',
                 path: '/settings/integrations'
             }
         ]
@@ -140,7 +140,7 @@ export const SettingsNavigation = [
         icon: 'group',
         items: [
             {
-                text: '🥇 Branding Defaults',
+                text: 'Branding Defaults',
                 path: '/settings/trackingpages'
             }
         ]

@@ -47,7 +47,9 @@ export default({menuToggleEnabled, title, toggleMenu, box}) => {
                     <Button className="icon-menu" icon="print" onClick={printLabel}/>
                 </Item>
                 <Item location={'after'} locateInMenu={'auto'}>
-                    <Button  renderAs={NavLink} className="icon-menu" icon="preferences" onClick={e=>menu.setMenuID("settings")}  to="/settings/my-profile" activeClassName="navlink-active" />
+                <NavLink onClick={e=>menu.setMenuID("settings")} className="link" to="/settings/my-profile" activeClassName="navlink-active" styles={{margin:0}}>
+                    <Button icon="preferences" styles={{margin:0}}/>
+                </NavLink>
                 </Item>
                 <Item className="icon-menu" location={'after'} locateInMenu={'auto'}>
                     <Button icon="help" />

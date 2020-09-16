@@ -4,23 +4,23 @@ export const ShipmentsNavigation = [
         icon: 'box',
         items: [
             {
-                text: '⏱️ Recents',
+                text: 'Recents',
                 path: '/shipments/shipped-recents'
             },
             {
-                text: '⛟ In Transit',
+                text: 'In Transit',
                 path: '/shipments/shipped-intransit'
             },
             {
-                text: '📨 Delivered',
+                text: 'Delivered',
                 path: '/shipments/shipped-delivered'
             },
             {
-                text: '✖️ Delivery Exceptions',
+                text: 'Delivery Exceptions',
                 path: '/shipments/shipped-delivery-exceptions'
             },
             {
-                text: '🗋 Voided',
+                text: 'Voided',
                 path: '/shipments/shipped-voided'
             }
         ]
@@ -46,15 +46,15 @@ export const ShipmentsNavigation = [
         icon: 'bulletlist',
         items: [
             {
-                text: '📖 Open',
+                text: 'Open',
                 path: '/shipments/batches/open'
             },
             {
-                text: '⚙️ Processed',
+                text: 'Processed',
                 path: '/shipments/batches/processes'
             },
             {
-                text: '📂 Archived',
+                text: 'Archived',
                 path: '/shipments/batches/archived'
             }
         ]

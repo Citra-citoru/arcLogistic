@@ -4,7 +4,7 @@ export const OrdersNavigation = [
         icon: 'money',
         items: [
             {
-                text: '⚙️ Manual Orders',
+                text: 'Manual Orders',
                 path: '/orders/awaiting-payment'
             }
         ]
@@ -13,7 +13,7 @@ export const OrdersNavigation = [
         icon: 'save',
         items: [
             {
-                text: '⚙️ Manual Orders',
+                text: 'Manual Orders',
                 path: '/orders/onhold'
             }
         ]
@@ -22,7 +22,7 @@ export const OrdersNavigation = [
         icon: 'box',
         items: [
             {
-                text: '⚙️ Manual Orders',
+                text: 'Manual Orders',
                 path: '/orders/awaiting-shipment'
             }
         ]
@@ -31,7 +31,7 @@ export const OrdersNavigation = [
         icon: 'gift',
         items: [
             {
-                text: '⚙️ Manual Orders',
+                text: 'Manual Orders',
                 path: '/orders/shipped'
             }
         ]
@@ -40,7 +40,7 @@ export const OrdersNavigation = [
         icon: 'close',
         items: [
             {
-                text: '⚙️ Manual Orders',
+                text: 'Manual Orders',
                 path: '/orders/cancelled'
             }
         ]
@@ -49,7 +49,7 @@ export const OrdersNavigation = [
         icon: 'warning',
         items: [
             {
-                text: '⚙️ Manual Orders',
+                text: 'Manual Orders',
                 path: '/orders/ordered-alert'
             }
         ]

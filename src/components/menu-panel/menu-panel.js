@@ -1,6 +1,6 @@
 import React, { useContext }from 'react';
 import './menu-panel.scss';
-import {Switch, Route, Redirect,NavLink, Link } from 'react-router-dom';
+import NavLink from 'react-router-dom/NavLink';
 import Button from 'devextreme-react/button';
 import {NavbarContext} from '../../contexts/top-navigation';
 

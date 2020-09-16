@@ -4,7 +4,7 @@ export const ShipmentsNavigation = [
         icon: 'box',
         items: [
             {
-                text: '📆 Recents',
+                text: '⏱️ Recents',
                 path: '/shipments/shipped-recents'
             },
             {

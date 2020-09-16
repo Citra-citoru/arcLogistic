@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef, useCallback, useMemo,useContext } f
 import TreeView from 'devextreme-react/tree-view';
 import { OrdersNavigation } from '../top-navigation/orders/navigation';
 import { ShipmentsNavigation } from '../top-navigation/shipments/navigation';
+import { SettingsNavigation } from '../top-navigation/settings/navigation';
 import { useNavigation } from '../../contexts/navigation';
 import { useScreenSize } from '../../utils/media-query';
 import './side-navigation-menu.scss';
@@ -31,6 +32,14 @@ export default function (props) {
     }
     else if(menuID === 'shipments'){
         return  ShipmentsNavigation.map((item) => {
+            if(item.path && !(/^\//.test(item.path))){ 
+                item.path = `/${item.path}`;
+            }
+            return {...item, expanded: isLarge} 
+        });
+    }
+    else if(menuID === 'settings'){
+        return  SettingsNavigation.map((item) => {
             if(item.path && !(/^\//.test(item.path))){ 
                 item.path = `/${item.path}`;
             }

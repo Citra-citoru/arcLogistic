@@ -6,10 +6,11 @@ import {Button} from 'devextreme-react/button';
 import CountryService from '../../../utils/country';
 import StatesService from '../../../utils/states';
 import CitiesService from '../../../utils/states';
-import Form, {Item, ButtonItem, GroupItem} from 'devextreme-react/form';
+import Form, {Item, SimpleItem, ButtonItem, GroupItem} from 'devextreme-react/form';
 import LoadIndicator from 'devextreme-react/load-indicator';
 import DataSource from 'devextreme/data/data_source';
 import notify from 'devextreme/ui/notify';
+import DataGrid from 'devextreme-react/data-grid';
 
  export default function NewOrder() {
     const countries = new DataSource({
@@ -128,11 +129,12 @@ import notify from 'devextreme/ui/notify';
                         <Item editorType={'dxTextBox'} dataField="Shipping Paid" />
                         <Item editorType={'dxTextBox'} dataField="tax Paid" />
                         <Item editorType={'dxTextBox'} dataField="Total Paid" />
-                        
                     </GroupItem>
-                    {/*} <ButtonItem horizontalAlignment="left" buttonOptions={btnCancel}/>
-                     <ButtonItem horizontalAlignment="left" buttonOptions={btnSave}/> */}
+                    <GroupItem caption="Order Line Items">
+                        <DataGrid/>
+                    </GroupItem>
                 </Form>
+                
                     <Button type="inherit" className="m-2" text='Cancel'/>
                     <Button type="default" text='Save Orders'/>
                 </form>

@@ -5,8 +5,7 @@ import {
     ShippedPage,
     AwaitingShipmentPage,
     OrderedAlertPage,
-    CanceledPage,
-    ProfilePage
+    CanceledPage
 } from '../../../pages/Orders';
 
 const OrdersRoutes = [
